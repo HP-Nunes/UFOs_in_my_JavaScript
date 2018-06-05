@@ -2,9 +2,11 @@
 var $tbody = document.querySelector("tbody");
 var $timeInput = document.querySelector("#datetime");
 var $searchBtn = document.querySelector("#search");
+// var $resetBtn = document.querySelector("#reset");
 
 // Add an event listener to the searchButton, call handleSearchButtonClick when clicked
 $searchBtn.addEventListener("click", handleSearchButtonClick);
+// $resetBtn.addEventListener("click", handleResetButtonClick);
 
 // Set filteredData to dataSet initially
 var filteredTime = dataSet;
@@ -41,5 +43,14 @@ function handleSearchButtonClick() {
   renderTable();
 }
 
+// function handleResetButtonClick() {
+//     filteredData = dataSet;
+//     $dateInput.value = "";
+//     $cityInput.value = "";
+//     $stateInput.value = "";
+//     $countryInput.value = "";
+//     $shapeInput.value = "";
+//     renderTable();
+//   }
 // Render the table for the first time on page load
 renderTable();
